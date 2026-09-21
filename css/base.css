@@ -35,6 +35,7 @@ html {
 
 body {
   margin: 0;
+  margin-top: 20px;
   font-family: Inter, sans-serif;
   background: var(--color-bg-page);
   color: var(--color-text-primary);
@@ -51,12 +52,18 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 button {
   font: inherit;
   cursor: pointer;
 }
 
 .container {
-  width: min(100% - 32px, var(--content));
+  width: 100%;
+  max-width: calc(var(--content-width) + var(--container-padding) * 2);
   margin-inline: auto;
+  padding-inline: var(--container-padding)
 }

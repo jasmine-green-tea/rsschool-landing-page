@@ -16,33 +16,42 @@
     })();
   </script>
 </head>
+
 <body>
-  <header class="header">
-    <a class="header-logo" href="index.html">
-      <img
-        class="header-logo-image"
-        src="assets/logo_light.webp"
-        alt="Coffee House logo"
-        width="100" height="60"
-      >
+  <header class="container header">
+    <a class="header-logo" href="index.html" aria-label="Coffee House">
+      <span class="header-logo-circle" aria-hidden="true"></span>
+      <span class="header-logo-text" aria-hidden="true"></span>
     </a>
     <nav class="header-nav" aria-label="Main navigation">
       <ul class="header-nav-list">
-        <li ><a href="index.html#favorite-coffee">Favorite coffee</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#mobile-app">Mobile app</a></li>
-        <li><a href="index.html#contacts">Contact us</a></li>
+        <li><a class="link-underline" href="index.html#favorite-coffee">Favorite coffee</a></li>
+        <li><a class="link-underline" href="index.html#about">About</a></li>
+        <li><a class="link-underline" href="index.html#mobile-app">Mobile app</a></li>
+        <li><a class="link-underline" href="index.html#contacts">Contact us</a></li>
       </ul>
     </nav>
-    <button
-      class="theme-switch"
-      type="button"
-      aria-label="Switch theme"
-      aria-pressed="false"
-    >
-      <span class="theme-switch-icon theme-switch-icon-sun" aria-hidden="true"></span>
-      <span class="theme-switch-icon theme-switch-icon-moon" aria-hidden="true"></span>
-    </button>
+    <div class="header-buttons">
+      <button
+        class="theme-switch"
+        type="button"
+        aria-label="Switch theme"
+        aria-pressed="false"
+      >
+        <span class="theme-switch-icon theme-switch-icon-sun" aria-hidden="true"></span>
+        <span class="theme-switch-icon theme-switch-icon-moon" aria-hidden="true"></span>
+      </button>
+
+      <a class="menu-button link-underline" href="catalog.html">
+        <span class="menu-button-text">Menu</span>
+        <span class="menu-button-icon" aria-hidden="true"></span>
+      </a>
+
+      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+    </div>
   </header>
 
   <main>
