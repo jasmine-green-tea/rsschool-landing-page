@@ -1,0 +1,86 @@
+.theme-switch {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px;
+  background: transparent;
+  border: 1px solid var(--color-border-primary);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.theme-switch-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.theme-switch-icon::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.theme-switch-icon-sun::before {
+  -webkit-mask-image: url("../assets/icons/sun.svg");
+          mask-image: url("../assets/icons/sun.svg");
+}
+
+.theme-switch-icon-moon::before {
+  -webkit-mask-image: url("../assets/icons/moon.svg");
+          mask-image: url("../assets/icons/moon.svg");
+}
+
+/* LIGHT MODE */
+[data-theme="light"] .theme-switch-icon-sun {
+  background-color: var(--color-text-accent);
+}
+
+[data-theme="light"] .theme-switch-icon-sun::before {
+  background-color: var(--color-text-inverse);
+}
+
+[data-theme="light"] .theme-switch-icon-moon {
+  background-color: transparent;
+}
+[data-theme="light"] .theme-switch-icon-moon::before {
+  background-color: var(--color-text-primary);
+}
+
+[data-theme="light"] .theme-switch:hover .theme-switch-icon-moon {
+  background-color: var(--color-border-inverse);
+}
+
+[data-theme="light"] .theme-switch:hover .theme-switch-icon-moon::before {
+  background-color: var(--color-text-inverse);
+}
+
+/* DARK MODE */
+[data-theme="dark"] .theme-switch-icon-sun {
+  background-color: transparent;
+}
+[data-theme="dark"] .theme-switch-icon-sun::before {
+  background-color: var(--color-text-primary);
+}
+
+[data-theme="dark"] .theme-switch-icon-moon {
+  background-color: var(--color-text-accent);
+}
+[data-theme="dark"] .theme-switch-icon-moon::before {
+  background-color: var(--color-text-inverse);
+}
+
+[data-theme="dark"] .theme-switch:hover .theme-switch-icon-sun {
+  background-color: var(--color-bg-container);
+}
