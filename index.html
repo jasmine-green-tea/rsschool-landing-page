@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee House</title>
+    <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-SemiBoldItalic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+    (function () {
+      const saved = localStorage.getItem('theme') || 'light';
+      if (saved) document.documentElement.dataset.theme = saved;
+    })();
+  </script>
+</head>
+
+<body>
+  <header class="container header">
+    <a class="header-logo" href="index.html" aria-label="Coffee House">
+      <span class="header-logo-circle" aria-hidden="true"></span>
+      <span class="header-logo-text" aria-hidden="true"></span>
+    </a>
+    <nav class="header-nav" aria-label="Main navigation">
+      <ul class="header-nav-list">
+        <li><a class="link-underline" href="index.html#favorite-coffee">Favorite coffee</a></li>
+        <li><a class="link-underline" href="index.html#about">About</a></li>
+        <li><a class="link-underline" href="index.html#mobile-app">Mobile app</a></li>
+        <li><a class="link-underline" href="index.html#contacts">Contact us</a></li>
+      </ul>
+    </nav>
+    <div class="header-buttons">
+      <button
+        class="theme-switch"
+        type="button"
+        aria-label="Switch theme"
+        aria-pressed="false"
+      >
+        <span class="theme-switch-icon theme-switch-icon-sun" aria-hidden="true"></span>
+        <span class="theme-switch-icon theme-switch-icon-moon" aria-hidden="true"></span>
+      </button>
+
+      <a class="menu-button link-underline" href="catalog.html">
+        <span class="menu-button-text">Menu</span>
+        <span class="menu-button-icon" aria-hidden="true"></span>
+      </a>
+
+      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero"></section>
+    <section id="favorite-coffee"></section>
+    <section id="about"></section>
+    <section id="mobile-app"></section>
+  </main>
+
+  <footer id="contacts"></footer>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>
